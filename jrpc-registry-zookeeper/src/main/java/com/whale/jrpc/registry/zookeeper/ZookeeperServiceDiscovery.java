@@ -1,4 +1,4 @@
-package com.whale.rpc.registry.zookeeper;
+package com.whale.jrpc.registry.zookeeper;
 
 import com.whale.jrpc.registry.ServiceDiscovery;
 import org.I0Itec.zkclient.ZkClient;
@@ -18,6 +18,10 @@ public class ZookeeperServiceDiscovery implements ServiceDiscovery {
     public static final Logger LOGGER = LoggerFactory.getLogger(ZookeeperServiceDiscovery.class);
 
     private String zkAddress;
+
+    public ZookeeperServiceDiscovery(String zkAddress){
+        this.zkAddress = zkAddress;
+    }
 
     @Override
     public String discover(String serviceName) {

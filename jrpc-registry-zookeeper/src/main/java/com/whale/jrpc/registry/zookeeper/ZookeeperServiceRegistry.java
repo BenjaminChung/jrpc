@@ -1,4 +1,4 @@
-package com.whale.rpc.registry.zookeeper;
+package com.whale.jrpc.registry.zookeeper;
 
 import com.whale.jrpc.registry.ServiceRegistry;
 import org.I0Itec.zkclient.ZkClient;

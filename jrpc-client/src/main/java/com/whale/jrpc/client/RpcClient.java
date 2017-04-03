@@ -1,6 +1,6 @@
 package com.whale.jrpc.client;
 
-import codec.RpcEncoder;
+import com.whale.jrpc.common.codec.RpcEncoder;
 import com.whale.jrpc.common.bean.RpcRequest;
 import com.whale.jrpc.common.bean.RpcResponse;
 import io.netty.bootstrap.Bootstrap;

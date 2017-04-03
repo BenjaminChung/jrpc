@@ -1,4 +1,4 @@
-package com.whale.rpc.registry.zookeeper;
+package com.whale.jrpc.registry.zookeeper;
 
 /**
  * Created by benjaminchung on 2017/4/3.

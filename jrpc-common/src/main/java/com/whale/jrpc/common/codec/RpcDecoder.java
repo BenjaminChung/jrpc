@@ -1,9 +1,9 @@
-package codec;
+package com.whale.jrpc.common.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
-import util.SerializationUtil;
+import com.whale.jrpc.common.util.SerializationUtil;
 
 import java.util.List;
 

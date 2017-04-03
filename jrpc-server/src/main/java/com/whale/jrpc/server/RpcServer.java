@@ -1,7 +1,7 @@
 package com.whale.jrpc.server;
 
-import codec.RpcDecoder;
-import codec.RpcEncoder;
+import com.whale.jrpc.common.codec.RpcDecoder;
+import com.whale.jrpc.common.codec.RpcEncoder;
 import com.whale.jrpc.common.bean.RpcRequest;
 import com.whale.jrpc.common.bean.RpcResponse;
 import com.whale.jrpc.registry.ServiceRegistry;
@@ -36,6 +36,11 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
     private ServiceRegistry serviceRegistry;
 
     private Map<String, Object> handleMap = new HashMap<String, Object>();
+
+    public RpcServer(String serviceAddress,ServiceRegistry serviceRegistry){
+        this.serviceAddress = serviceAddress;
+        this.serviceRegistry = serviceRegistry;
+    }
 
 
     @Override

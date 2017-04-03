@@ -1,4 +1,4 @@
-package com.whale.rpc.registry.zookeeper;
+package com.whale.jrpc.registry.zookeeper;
 
 import org.I0Itec.zkclient.ZkClient;
 import org.apache.zookeeper.CreateMode;

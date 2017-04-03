@@ -11,6 +11,7 @@
         <module>jrpc-common</module>
         <module>jrpc-server</module>
         <module>jrpc-registry-zookeeper</module>
+        <module>jprc-sample</module>
     </modules>
     <packaging>pom</packaging>
 

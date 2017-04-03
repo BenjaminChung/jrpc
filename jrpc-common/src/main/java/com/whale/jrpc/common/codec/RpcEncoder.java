@@ -1,9 +1,9 @@
-package codec;
+package com.whale.jrpc.common.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
-import util.SerializationUtil;
+import com.whale.jrpc.common.util.SerializationUtil;
 
 /**
  * RPC 编码器
