@@ -32,4 +32,8 @@ public class RpcResponse {
     public Exception getException() {
         return exception;
     }
+
+    public void setException(Exception exception) {
+        this.exception = exception;
+    }
 }

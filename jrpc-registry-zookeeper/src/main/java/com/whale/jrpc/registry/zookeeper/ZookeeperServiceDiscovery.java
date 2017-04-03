@@ -29,7 +29,7 @@ public class ZookeeperServiceDiscovery implements ServiceDiscovery {
         LOGGER.debug("conneted zookeeper");
         try {
             String servicePath = Constants.ZK_REGISTRY_PATH + Constants.SEPARATOR + serviceName;
-            if (zkClient.exists(servicePath)) {
+            if (!zkClient.exists(servicePath)) {
                 throw new RuntimeException(String.format(" can not find any service node on path :%s", servicePath));
             }
             List<String> addressList = zkClient.getChildren(servicePath);

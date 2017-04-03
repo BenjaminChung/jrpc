@@ -1,5 +1,6 @@
 package com.whale.jrpc.client;
 
+import com.whale.jrpc.common.codec.RpcDecoder;
 import com.whale.jrpc.common.codec.RpcEncoder;
 import com.whale.jrpc.common.bean.RpcRequest;
 import com.whale.jrpc.common.bean.RpcResponse;
@@ -57,7 +58,7 @@ public class RpcClient extends SimpleChannelInboundHandler<RpcResponse>{
                 protected void initChannel(NioSocketChannel ch) throws Exception {
                     ChannelPipeline channelPipeline = ch.pipeline();
                     channelPipeline.addLast(new RpcEncoder(RpcRequest.class));
-                    channelPipeline.addLast(new RpcEncoder(RpcResponse.class));
+                    channelPipeline.addLast(new RpcDecoder(RpcResponse.class));
                     channelPipeline.addLast(RpcClient.this);
                 }
 
