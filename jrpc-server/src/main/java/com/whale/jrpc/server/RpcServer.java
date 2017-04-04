@@ -79,6 +79,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                     pipeline.addLast(new RpcServerHandler(handleMap));
                 }
             });
+            //最大允许连接的客户端数
             serverBootstrap.option(ChannelOption.SO_BACKLOG,1024);
             serverBootstrap.childOption(ChannelOption.SO_KEEPALIVE,true);
             //获取rpc服务器ip地址与端口号

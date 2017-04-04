@@ -1,6 +1,7 @@
 package com.whale.jrpc.sample.server;
 
 import com.whale.jrpc.sample.api.HelloService;
+import com.whale.jrpc.sample.model.Person;
 import com.whale.jrpc.server.RpcService;
 
 /**
@@ -12,5 +13,10 @@ public class HelloServiceImpl implements HelloService{
     @Override
     public String hello(String name) {
         return "hello " + name;
+    }
+
+    @Override
+    public String hello(Person person) {
+        return person.getName() + ":" + person.getAge();
     }
 }
